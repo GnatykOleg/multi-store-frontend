@@ -1,5 +1,11 @@
-const App = () => {
-  return <h1>Multi Store</h1>;
-};
+import { Header } from "./components";
 
+import PagesRoutes from "./pages-routes/PagesRoutes";
+
+const App = () => (
+  <>
+    <Header />
+    <PagesRoutes />
+  </>
+);
 export default App;
