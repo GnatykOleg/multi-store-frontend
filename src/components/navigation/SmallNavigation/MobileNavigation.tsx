@@ -4,13 +4,13 @@ import { NavLink } from "react-router-dom";
 
 import { Button, MenuItem } from "@mui/material";
 
-import { ISmallNavigationProps } from "../../../types/common/components/components-types";
+import { IMobileNavigationProps } from "../../../types/components/components-types";
 
 import { navigationItems } from "../navigationItems";
 
-import * as Styled from "./SmallNavigation.styled";
+import * as Styled from "./MobileNavigation.styled";
 
-const SmallNavigation = ({ isLinkActive }: ISmallNavigationProps) => {
+const MobileNavigation = ({ isLinkActive }: IMobileNavigationProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const open = Boolean(anchorEl);
@@ -64,4 +64,4 @@ const SmallNavigation = ({ isLinkActive }: ISmallNavigationProps) => {
   );
 };
 
-export default SmallNavigation;
+export default MobileNavigation;

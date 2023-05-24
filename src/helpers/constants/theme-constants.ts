@@ -10,6 +10,10 @@ export const TRANSITION = Object.freeze({
   PRIMARY: "all 400ms linear",
 });
 
+export const BOX_SHADOW = Object.freeze({
+  PRIMARY: "1px 1px 5px 1px #000000",
+});
+
 export const BORDER = Object.freeze({
   PRIMARY: `1px solid ${COLOR.PRIMARY}`,
   SECONDARY: `1px solid ${COLOR.SECONDARY}`,
