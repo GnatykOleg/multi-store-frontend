@@ -8,7 +8,7 @@ interface NestedLinkActivity {
   [key: string]: string | number;
 }
 
-export interface ISmallNavigationProps {
+export interface IMobileNavigationProps {
   isLinkActive: (path: string) => LinkActivity;
 }
 

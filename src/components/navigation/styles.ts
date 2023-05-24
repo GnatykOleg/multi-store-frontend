@@ -4,6 +4,7 @@ import {
   FONT_SIZE,
   FONT_WEIGHT,
   TRANSITION,
+  BOX_SHADOW,
 } from "../../helpers/constants/theme-constants";
 
 export const linkStyles = {

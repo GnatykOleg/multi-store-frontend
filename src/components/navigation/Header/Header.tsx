@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-import SmallNavigation from "../SmallNavigation/SmallNavigation";
+import SmallNavigation from "../SmallNavigation/MobileNavigation";
 import FullNavigation from "../FullNavigation/FullNavigation";
 import Logo from "../Logo/Logo";
 
@@ -12,12 +12,12 @@ import { BREAKPOINTS } from "../../../helpers/constants/theme-constants";
 
 import * as Styled from "./Header.styled";
 
-const { MAX_MOBILE, MIN_TABLET } = BREAKPOINTS;
+const { MAX_MOBILE, MIN_TABLET, MIN_DESKTOP, MAX_TABLET } = BREAKPOINTS;
 
 const Header = () => {
-  const isMobile = useMediaQuery(`(max-width:${MAX_MOBILE})`);
+  const maxTabletWidth = useMediaQuery(`(max-width:${MAX_TABLET})`);
 
-  const isTablet = useMediaQuery(`(min-width:${MIN_TABLET})`);
+  const minDesktopWidth = useMediaQuery(`(min-width:${MIN_DESKTOP})`);
 
   const { pathname } = useLocation();
 
@@ -31,9 +31,9 @@ const Header = () => {
           <Toolbar component="ul">
             <Logo />
 
-            {isMobile && <SmallNavigation isLinkActive={isLinkActive} />}
+            {maxTabletWidth && <SmallNavigation isLinkActive={isLinkActive} />}
 
-            {isTablet && <FullNavigation isLinkActive={isLinkActive} />}
+            {minDesktopWidth && <FullNavigation isLinkActive={isLinkActive} />}
           </Toolbar>
         </nav>
       </Styled.MyHeader>

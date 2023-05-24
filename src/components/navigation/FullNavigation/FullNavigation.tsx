@@ -4,31 +4,23 @@ import { nanoid } from "@reduxjs/toolkit";
 
 import { Button } from "@mui/material";
 
-import { IFullNavigationProps } from "../../../types/common/components/components-types";
+import { IFullNavigationProps } from "../../../types/components/components-types";
 
 import { SPACING } from "../../../helpers/constants/theme-constants";
 
 import { navigationItems } from "../navigationItems";
 
 const FullNavigation = ({ isLinkActive }: IFullNavigationProps) => {
-  const notLastChildMarginRight = (index: number) => {
-    const lastElementIndex = navigationItems.length - 1;
-
-    const marginRight = { marginRight: SPACING.MD };
-
-    return index !== lastElementIndex && marginRight;
-  };
-
   return (
     <>
-      {navigationItems.map(({ text, to }, index) => (
+      {navigationItems.map(({ text, to }, index, array) => (
         <li key={nanoid()}>
           <Button
             component={NavLink}
             to={to}
             sx={{
               ...isLinkActive(to),
-              ...notLastChildMarginRight(index),
+              marginRight: index !== array.length - 1 ? SPACING.MD : 0,
             }}
           >
             {text}
