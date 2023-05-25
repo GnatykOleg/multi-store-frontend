@@ -28,7 +28,7 @@ const CompaniesItem = ({
         </Styled.MyImageWrapper>
 
         <Styled.MyTypography
-          as="h3"
+          as="p"
           sx={{ color: companyId === _id ? COLOR.PRIMARY : COLOR.SECONDARY }}
         >
           {company_name}

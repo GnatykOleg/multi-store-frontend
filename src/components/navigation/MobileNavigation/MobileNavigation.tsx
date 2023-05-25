@@ -4,14 +4,14 @@ import { NavLink } from "react-router-dom";
 
 import { Button, MenuItem } from "@mui/material";
 
-import { IMobileNavigationProps } from "../../../types/components/components-types";
+import { INavigationProps } from "../../../types/components/components-types";
 
 import { navigationItems } from "../navigationItems";
 
 import * as Styled from "./MobileNavigation.styled";
 import { nanoid } from "@reduxjs/toolkit";
 
-const MobileNavigation = ({ isLinkActive }: IMobileNavigationProps) => {
+const MobileNavigation = ({ isLinkActive }: INavigationProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const open = Boolean(anchorEl);

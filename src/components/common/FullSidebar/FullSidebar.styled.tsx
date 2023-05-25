@@ -1,8 +1,10 @@
 import { styled } from "@mui/system";
 
-import { SPACING, COLOR } from "../../../helpers/constants/theme-constants";
+import { Box } from "@mui/material";
 
-export const MySidebar = styled("section")({
+import { COLOR } from "../../../helpers/constants/theme-constants";
+
+export const MySidebar = styled(Box)({
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-between",
@@ -10,6 +12,4 @@ export const MySidebar = styled("section")({
   width: "400px",
 
   background: COLOR.WHITE,
-
-  padding: SPACING.XL,
 });

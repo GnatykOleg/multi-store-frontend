@@ -3,8 +3,6 @@ export const COLOR = Object.freeze({
 
   SECONDARY: "#696969",
 
-  BLACK: "#696969",
-
   WHITE: "#FEFEFE",
 });
 

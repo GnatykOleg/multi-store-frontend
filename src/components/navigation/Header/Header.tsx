@@ -12,7 +12,7 @@ import { BREAKPOINTS } from "../../../helpers/constants/theme-constants";
 
 import * as Styled from "./Header.styled";
 
-const { MAX_MOBILE, MIN_TABLET, MIN_DESKTOP, MAX_TABLET } = BREAKPOINTS;
+const { MIN_DESKTOP, MAX_TABLET } = BREAKPOINTS;
 
 const Header = () => {
   const maxTabletWidth = useMediaQuery(`(max-width:${MAX_TABLET})`);
