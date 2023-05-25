@@ -4,13 +4,13 @@ import { nanoid } from "@reduxjs/toolkit";
 
 import { Button } from "@mui/material";
 
-import { IFullNavigationProps } from "../../../types/components/components-types";
+import { INavigationProps } from "../../../types/components/components-types";
 
 import { SPACING } from "../../../helpers/constants/theme-constants";
 
 import { navigationItems } from "../navigationItems";
 
-const FullNavigation = ({ isLinkActive }: IFullNavigationProps) => {
+const FullNavigation = ({ isLinkActive }: INavigationProps) => {
   return (
     <>
       {navigationItems.map(({ text, to }, index, array) => (

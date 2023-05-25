@@ -1,9 +1,13 @@
-import { ISectionProps } from "../../../types/components/components-types";
+import { Container } from "@mui/material";
+
+import { IMySectionProps } from "../../../types/components/components-types";
 
 import * as Styled from "./MySection.styled";
 
-const Section = ({ children }: ISectionProps) => (
-  <Styled.MySection>{children}</Styled.MySection>
+const MySection = ({ children, styles = {} }: IMySectionProps) => (
+  <Styled.MySection style={styles}>
+    <Container>{children}</Container>
+  </Styled.MySection>
 );
 
-export default Section;
+export default MySection;

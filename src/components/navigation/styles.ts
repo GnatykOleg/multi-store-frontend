@@ -13,8 +13,10 @@ export const linkStyles = {
 
   transition: TRANSITION.PRIMARY,
 
-  "&.MuiButton-root:hover": {
+  "&:hover, &:focus": {
     boxShadow: BOX_SHADOW.PRIMARY,
+    border: BORDER.PRIMARY,
+    color: COLOR.PRIMARY,
   },
 };
 

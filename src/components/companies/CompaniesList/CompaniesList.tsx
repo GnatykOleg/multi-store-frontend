@@ -2,7 +2,7 @@ import { getCompaniesLoadingStatusSelector } from "../../../redux/companies/comp
 
 import { useAppSelector } from "../../../helpers/hooks/redux-hooks";
 
-import { ICompaniesListProps } from "../../../types/components/components-types";
+import { IChildrenProps } from "../../../types/components/components-types";
 
 import { SPACING } from "../../../helpers/constants/theme-constants";
 
@@ -12,7 +12,7 @@ import Loader from "../../common/Loader/Loader";
 
 import * as Styled from "./CompaniesList.styled";
 
-const CompaniesList = ({ children }: ICompaniesListProps) => {
+const CompaniesList = ({ children }: IChildrenProps) => {
   const loading = useAppSelector(getCompaniesLoadingStatusSelector);
 
   if (loading) return <Loader />;
