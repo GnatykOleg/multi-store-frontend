@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-import SmallNavigation from "../SmallNavigation/MobileNavigation";
+import SmallNavigation from "../MobileNavigation/MobileNavigation";
 import FullNavigation from "../FullNavigation/FullNavigation";
 import Logo from "../Logo/Logo";
 
