@@ -14,7 +14,7 @@ export const linkStyles = {
   transition: TRANSITION.PRIMARY,
 
   "&.MuiButton-root:hover": {
-    boxShadow: "1px 1px 5px 1px #000000",
+    boxShadow: BOX_SHADOW.PRIMARY,
   },
 };
 

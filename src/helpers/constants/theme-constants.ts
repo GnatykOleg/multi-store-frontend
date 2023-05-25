@@ -1,7 +1,9 @@
 export const COLOR = Object.freeze({
-  PRIMARY: "#7EB101",
+  PRIMARY: "#33CC66",
 
   SECONDARY: "#696969",
+
+  BLACK: "#696969",
 
   WHITE: "#FEFEFE",
 });
@@ -11,12 +13,13 @@ export const TRANSITION = Object.freeze({
 });
 
 export const BOX_SHADOW = Object.freeze({
-  PRIMARY: "1px 1px 5px 1px #000000",
+  PRIMARY: `1px 1px 5px 1px ${COLOR.SECONDARY}`,
 });
 
 export const BORDER = Object.freeze({
-  PRIMARY: `1px solid ${COLOR.PRIMARY}`,
-  SECONDARY: `1px solid ${COLOR.SECONDARY}`,
+  PRIMARY: `2px solid ${COLOR.PRIMARY}`,
+  SECONDARY: `2px solid ${COLOR.SECONDARY}`,
+  RADIUS: "5px",
 });
 
 export const FONT_WEIGHT = Object.freeze({

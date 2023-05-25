@@ -9,6 +9,7 @@ import { IMobileNavigationProps } from "../../../types/components/components-typ
 import { navigationItems } from "../navigationItems";
 
 import * as Styled from "./MobileNavigation.styled";
+import { nanoid } from "@reduxjs/toolkit";
 
 const MobileNavigation = ({ isLinkActive }: IMobileNavigationProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -24,7 +25,7 @@ const MobileNavigation = ({ isLinkActive }: IMobileNavigationProps) => {
   };
 
   const menuItems = navigationItems.map(({ text, to }) => (
-    <MenuItem>
+    <MenuItem key={nanoid()}>
       <Button
         fullWidth
         onClick={handleClose}

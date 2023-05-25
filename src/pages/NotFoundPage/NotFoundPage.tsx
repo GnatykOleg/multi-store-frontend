@@ -1,18 +1,13 @@
-import { Typography } from "@mui/material";
-import { visuallyHidden } from "@mui/utils";
-
 import { Container } from "@mui/material";
 
-import { MySection } from "../../components";
+import { MySection, MyTitle } from "../../components";
 
 import image from "../../assets/images/page-not-found.png";
 
 const PageNotFound = () => {
   return (
     <MySection>
-      <Typography variant="h1" component={"h2"} sx={visuallyHidden}>
-        Page not found
-      </Typography>
+      <MyTitle text="Page not found" as="h2" hidden />
 
       <Container fixed>
         <img
