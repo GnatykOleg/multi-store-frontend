@@ -16,9 +16,9 @@ export const getAllCompaniesOperation = createAsyncThunk<
   { rejectValue: string }
 >(ACTION_NAME_COMPANIES, async (_, { rejectWithValue }) => {
   try {
-    const users: ICompany[] = await api.getAllCompaniesApiService();
+    const companies: ICompany[] = await api.getAllCompaniesApiService();
 
-    return users;
+    return companies;
   } catch (error: any) {
     toast.error(error.message);
     return rejectWithValue(error.message);

@@ -6,14 +6,17 @@ import persistStore from "redux-persist/es/persistStore";
 
 import { middlewareConfig, persistConfig } from "../persist/configuration";
 
-import companiesSlice from "../companies/companiesSlice";
-
 import { REDUX_CONSTANTS } from "../../helpers/constants/redux-constants";
 
-const { STATE_KEY_COMPANIES } = REDUX_CONSTANTS;
+import companiesSlice from "../companies/companiesSlice";
+
+import productsSlice from "../products/productsSlice";
+
+const { STATE_KEY_COMPANIES, STATE_KEY_PRODUCTS } = REDUX_CONSTANTS;
 
 const rootReducer = combineReducers({
   [STATE_KEY_COMPANIES]: companiesSlice,
+  [STATE_KEY_PRODUCTS]: productsSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
