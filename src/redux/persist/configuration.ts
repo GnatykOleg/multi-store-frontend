@@ -11,17 +11,17 @@ import storage from "redux-persist/lib/storage";
 
 import { REDUX_CONSTANTS } from "../../helpers/constants/redux-constants";
 
-const { PERSIST_KEY, SLICE_STATE_KEY_COMPANIES } = REDUX_CONSTANTS;
+const { PERSIST_KEY, STATE_KEY_COMPANIES, STATE_KEY_PRODUCTS, STATE_KEY_CART } =
+  REDUX_CONSTANTS;
 
 export const persistConfig = {
   key: PERSIST_KEY,
 
   storage,
 
-  // Add later!
-  // whitelist: [],
+  whitelist: [STATE_KEY_CART],
 
-  blacklist: ["_persist", SLICE_STATE_KEY_COMPANIES],
+  blacklist: ["_persist", STATE_KEY_COMPANIES, STATE_KEY_PRODUCTS],
 };
 
 export const middlewareConfig = {
