@@ -4,6 +4,7 @@ export { default as MySection } from "./common/MySection/MySection";
 export { default as MobileSidebar } from "./common/MobileSidebar/MobileSidebar";
 export { default as FullSidebar } from "./common/FullSidebar/FullSidebar";
 export { default as MyButton } from "./common/MyButton/MyButton";
+export { default as FormMakeOrder } from "./forms/FormMakeOrder/FormMakeOrder";
 
 export { default as Header } from "./navigation/Header/Header";
 

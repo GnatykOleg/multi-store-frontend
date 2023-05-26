@@ -1,32 +1,36 @@
+import { Grid } from "@mui/material";
+
 import { useAppSelector } from "../../../helpers/hooks/redux-hooks";
 
 import { getProductsLoadingStatusSelector } from "../../../redux/products/productsSelectors";
 
-import { IChildrenProps } from "../../../types/components/components-types";
+import { IProductsListProps } from "../../../types/components/components-types";
 
 import Loader from "../../common/Loader/Loader";
-
 import MyTitle from "../../common/MyTitle/MyTitle";
+import ProductsItem from "../ProductsItem/ProductsItem";
 
 import { SPACING } from "../../../helpers/constants/theme-constants";
 
 import * as Styled from "./ProductsList.styled";
 
-export const ProductsList = ({ children }: IChildrenProps) => {
+export const ProductsList = ({ products }: IProductsListProps) => {
   const loading = useAppSelector(getProductsLoadingStatusSelector);
+
+  const titleText = products
+    ? "Products:"
+    : "To display a list of products, select a store.";
 
   if (loading) return <Loader />;
 
-  const itemTitleStyles = { marginBottom: SPACING.MD };
-
   return (
-    <Styled.MyList>
-      <li style={itemTitleStyles}>
-        <MyTitle text="Products:" as="h3" variant="h5" />
-      </li>
+    <Styled.MyProductsWrapper>
+      <MyTitle text={titleText} as="h3" variant="h5" />
 
-      {children}
-    </Styled.MyList>
+      <Grid container spacing={2} component="ul" sx={{ marginTop: SPACING.MD }}>
+        <ProductsItem products={products} />
+      </Grid>
+    </Styled.MyProductsWrapper>
   );
 };
 

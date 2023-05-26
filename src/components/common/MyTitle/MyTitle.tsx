@@ -14,6 +14,7 @@ const MyTitle = ({
     component={as}
     variant={variant || null}
     sx={hidden ? visuallyHidden : null}
+    align="center"
   >
     {text}
   </Typography>

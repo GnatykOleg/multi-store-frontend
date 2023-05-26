@@ -6,7 +6,7 @@ import * as Styled from "./MySection.styled";
 
 const MySection = ({ children, styles = {} }: IMySectionProps) => (
   <Styled.MySection style={styles}>
-    <Container>{children}</Container>
+    <Container sx={{ height: "100%" }}>{children}</Container>
   </Styled.MySection>
 );
 

@@ -9,7 +9,7 @@ import {
 
 import backgroundImage from "../../../assets/images/products-bg.webp";
 
-export const MyList = styled("ul")({
+export const MyProductsWrapper = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

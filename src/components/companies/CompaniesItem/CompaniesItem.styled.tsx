@@ -44,6 +44,10 @@ export const MyItem = styled("li")({
     border: BORDER.PRIMARY,
     boxShadow: BOX_SHADOW.PRIMARY,
   },
+
+  "&:hover > p, &:focus > p": {
+    color: COLOR.PRIMARY,
+  },
 });
 
 export const MyImageWrapper = styled(Box)({
@@ -66,4 +70,6 @@ export const MyTypography = styled(Typography)({
   fontWeight: FONT_WEIGHT.SEMI_BOLD,
 
   textAlign: "center",
+
+  transition: TRANSITION.PRIMARY,
 });

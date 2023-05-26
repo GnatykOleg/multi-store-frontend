@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 
-import SmallNavigation from "../MobileNavigation/MobileNavigation";
+import MobileNavigation from "../MobileNavigation/MobileNavigation";
 import FullNavigation from "../FullNavigation/FullNavigation";
 import Logo from "../Logo/Logo";
 
@@ -31,7 +31,7 @@ const Header = () => {
           <Toolbar component="ul">
             <Logo />
 
-            {maxTabletWidth && <SmallNavigation isLinkActive={isLinkActive} />}
+            {maxTabletWidth && <MobileNavigation isLinkActive={isLinkActive} />}
 
             {minDesktopWidth && <FullNavigation isLinkActive={isLinkActive} />}
           </Toolbar>

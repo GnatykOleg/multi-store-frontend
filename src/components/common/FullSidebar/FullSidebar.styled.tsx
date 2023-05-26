@@ -10,6 +10,7 @@ export const MySidebar = styled(Box)({
   justifyContent: "space-between",
 
   width: "400px",
+  height: "100%",
 
   background: COLOR.WHITE,
 });

@@ -1,5 +1,3 @@
-import { CardContent } from "@mui/material";
-
 import { IMobileSidebarProps } from "../../../types/components/components-types";
 
 import * as Styled from "./MobileSidebar.styles";
@@ -15,13 +13,11 @@ const MobileSidebar = ({
     onBackdropClick={sidebarHandler}
     variant="temporary"
   >
-    <CardContent>
-      <Styled.MyIconButton onClick={sidebarHandler} aria-label="close sidebar">
-        <Styled.MyCloseIcon />
-      </Styled.MyIconButton>
+    <Styled.MyIconButton onClick={sidebarHandler} aria-label="close sidebar">
+      <Styled.MyCloseIcon />
+    </Styled.MyIconButton>
 
-      {children}
-    </CardContent>
+    <Styled.MyBox>{children}</Styled.MyBox>
   </Styled.MyDrawer>
 );
 export default MobileSidebar;

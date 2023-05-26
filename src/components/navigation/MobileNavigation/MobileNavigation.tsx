@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import { nanoid } from "@reduxjs/toolkit";
+
 import { NavLink } from "react-router-dom";
 
 import { Button, MenuItem } from "@mui/material";
@@ -9,21 +11,16 @@ import { INavigationProps } from "../../../types/components/components-types";
 import { navigationItems } from "../navigationItems";
 
 import * as Styled from "./MobileNavigation.styled";
-import { nanoid } from "@reduxjs/toolkit";
 
 const MobileNavigation = ({ isLinkActive }: INavigationProps) => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
 
   const open = Boolean(anchorEl);
 
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) =>
     setAnchorEl(event.currentTarget);
-  };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
+  const handleClose = () => setAnchorEl(null);
   const menuItems = navigationItems.map(({ text, to }) => (
     <MenuItem key={nanoid()}>
       <Button
