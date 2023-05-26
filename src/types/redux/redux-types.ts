@@ -10,6 +10,8 @@ const {
   STATE_KEY_COMPANIES,
   STATE_KEY_PRODUCTS,
   STATE_KEY_CART,
+  STATE_KEY_ORDERS_HISTORY,
+  SLICE_STATE_KEY_ORDERS_HISTORY,
 } = REDUX_CONSTANTS;
 
 export interface ICompany {
@@ -36,6 +38,8 @@ export interface IOrder {
   phone: string;
   adress: string;
   total_price: number;
+  createdAt?: string;
+  updatedAt?: string;
   orders: IProduct[];
 }
 
@@ -52,6 +56,10 @@ export interface IProductsSliceInitialState extends ICommonSliceState {
   [SLICE_STATE_KEY_PRODUCTS]: null | IProduct[];
 }
 
+export interface IOrdersHistorySliceInitialState extends ICommonSliceState {
+  [SLICE_STATE_KEY_ORDERS_HISTORY]: null | IOrder[];
+}
+
 export interface ICartSliceInitialState extends ICommonSliceState {
   [SLICE_STATE_KEY_CART]: IProduct[];
   [SLICE_STATE_KEY_TOTAL_PRICE]: number;
@@ -61,4 +69,5 @@ export interface IState {
   [STATE_KEY_COMPANIES]: ICompaniesSliceInitialState;
   [STATE_KEY_PRODUCTS]: IProductsSliceInitialState;
   [STATE_KEY_CART]: ICartSliceInitialState;
+  [STATE_KEY_ORDERS_HISTORY]: IOrdersHistorySliceInitialState;
 }

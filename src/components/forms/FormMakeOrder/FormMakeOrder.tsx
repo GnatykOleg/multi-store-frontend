@@ -23,13 +23,13 @@ import MyTitle from "../../common/MyTitle/MyTitle";
 import * as Styled from "./FormMakeOrder.styled";
 
 const FormMakeOrder = () => {
+  const dispatch = useAppDispatch();
+
   const cart = useAppSelector(getCartDataSelector);
 
   const cartTotalPrice = useAppSelector(getCartTotalPriceSelector);
 
   const totalPriceText = `Total price: ${cartTotalPrice.toFixed(2)}$`;
-
-  const dispatch = useAppDispatch();
 
   const formik = useFormik({
     initialValues: {
@@ -38,7 +38,7 @@ const FormMakeOrder = () => {
       phone: "",
       adress: "",
     },
-    // Вернуть валидацию
+
     validationSchema: makeOrderSchema,
     onSubmit: (values, { resetForm }) => {
       const order = { ...values, total_price: cartTotalPrice, orders: cart };

@@ -27,6 +27,20 @@ export const getProductsForCompanyApiService = async (id: string) => {
   return data;
 };
 
+export const getOrdersHistoryApiService = async ({
+  phone,
+  email,
+}: {
+  phone: string;
+  email: string;
+}) => {
+  const { data }: AxiosResponse<IOrder[]> = await instance.get(
+    `${ENDPOINT_ORDERS}?phone=${phone}&email=${email}`
+  );
+
+  return data;
+};
+
 export const makeOrderApiService = async (order: IOrder) => {
   const { data }: AxiosResponse<IOrder> = await instance.post(
     ENDPOINT_ORDERS,
