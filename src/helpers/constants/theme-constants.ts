@@ -36,7 +36,7 @@ export const FONT_SIZE = Object.freeze({
 export const SPACING = Object.freeze({
   SM: "0.5rem",
   MD: "1rem",
-  LG: "1.rem",
+  LG: "1.5rem",
   XL: "2rem",
   XXL: "3rem",
 });

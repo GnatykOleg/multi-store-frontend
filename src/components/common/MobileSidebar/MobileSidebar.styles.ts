@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-import { Drawer, IconButton } from "@mui/material";
+import { Box, Drawer, IconButton } from "@mui/material";
 
 import CancelIcon from "@mui/icons-material/Cancel";
 
@@ -13,8 +13,20 @@ import {
 export const MyDrawer = styled(Drawer)({
   "& .MuiPaper-root": {
     minWidth: "320px",
-    paddingTop: SPACING.XXL,
+
+    display: "flex",
+    flexDirection: "column",
   },
+});
+
+export const MyBox = styled(Box)({
+  height: "100%",
+
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+
+  padding: SPACING.LG,
 });
 
 export const MyIconButton = styled(IconButton)({

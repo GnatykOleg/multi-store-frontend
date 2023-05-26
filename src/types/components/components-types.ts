@@ -1,6 +1,6 @@
 import { ElementType, ReactNode } from "react";
 
-import { ICompany } from "../redux/redux-types";
+import { IProduct } from "../redux/redux-types";
 
 // Universal types
 export interface IChildrenProps {
@@ -23,8 +23,9 @@ export interface IMobileSidebarProps extends IChildrenProps {
 
 export interface IMyButtonProps {
   text: string;
-  onClick: () => void;
+  onClick?: () => void;
   styles?: { [key: string]: string };
+  type?: "button" | "reset" | "submit" | undefined;
 }
 
 export interface IMySectionProps extends IChildrenProps {
@@ -48,9 +49,13 @@ export interface INavigationProps {
 // Companies
 
 export interface ICompaniesItemsProps {
-  companies: ICompany[] | null;
-  companyId: string;
-  handleItemClick: (idFromCompanyCard: string) => void;
+  // companies: ICompany[] | null;
+  currentCompanyId: string;
+  handleItemClick: (companyIdFromItem: string) => void;
 }
 
 // Products
+
+export interface IProductsListProps {
+  products: IProduct[] | null;
+}
