@@ -12,11 +12,15 @@ import companiesSlice from "../companies/companiesSlice";
 
 import productsSlice from "../products/productsSlice";
 
-const { STATE_KEY_COMPANIES, STATE_KEY_PRODUCTS } = REDUX_CONSTANTS;
+import cartSlice from "../cart/cartSlice";
+
+const { STATE_KEY_COMPANIES, STATE_KEY_PRODUCTS, STATE_KEY_CART } =
+  REDUX_CONSTANTS;
 
 const rootReducer = combineReducers({
   [STATE_KEY_COMPANIES]: companiesSlice,
   [STATE_KEY_PRODUCTS]: productsSlice,
+  [STATE_KEY_CART]: cartSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
